@@ -211,7 +211,7 @@ try:
     print('Теперь вам нужно из полученных букв составить слово')
     while True:
         word_ans=input('Введите слово: ')
-        if word_ans ==word:
+        if word_ans.capitalize() ==word:
             print('Дверь открывается и вы проходите внутрь')
             time.sleep(3)
             break
