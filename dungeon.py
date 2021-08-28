@@ -123,7 +123,7 @@ try:
         monster_power2 = 5
         if skill['intel'] > 7:
             print(
-                f"Вы оцениваете силу монстра, она равна {monster_power1}, ваша боевая эффективность равна {efficiency}")
+                f"Вы оцениваете силу монстра, она равна {monster_power2}, ваша боевая эффективность равна {efficiency}")
 
         while True:
             chouse1_d1 = int(input('Что будете делать?\n'
