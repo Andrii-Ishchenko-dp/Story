@@ -120,10 +120,10 @@ try:
         time.sleep(5)
         print('Не смотря на устрашающий вид, чудовище оценивающе посмотрело на вас и, видимо, ожидая от вас каких-то действий\n'
               'замерло')
-        monster_power2 = 5
+        monster_power2 = random.randint(12,18)
         if skill['intel'] > 7:
             print(
-                f"Вы оцениваете силу монстра, она равна {monster_power1}, ваша боевая эффективность равна {efficiency}")
+                f"Вы оцениваете силу монстра, она равна {monster_power2}, ваша боевая эффективность равна {efficiency}")
 
         while True:
             chouse1_d1 = int(input('Что будете делать?\n'
