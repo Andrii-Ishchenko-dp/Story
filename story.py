@@ -219,33 +219,45 @@ try:
             print('Вы вставляете буквы в пазы, вы слышите, как за стенами начинают крутиться шестерёнки и уже в следующее\n'
                   'мгновение пол под вами раздвигается и вы падаете в бездну')
             raise TypeError
-    number_of_rooms = random.randint(3,5)
-    dungeons = [1, 2, 4, 5, 6, 3]
 
-    for i in range(1, number_of_rooms + 1):
-        random.shuffle(dungeons)
-        dung_chouse = dungeons.pop()
-        if dung_chouse == 1:
-            dungeon1(skill, efficiency, hero)
-        elif dung_chouse == 2:
-            dungeon2(skill, efficiency, hero)
-        elif dung_chouse == 3:
-            dungeon3(skill, efficiency, hero)
-        elif dung_chouse == 4:
-            dungeon4(skill, efficiency, hero)
-        elif dung_chouse == 5:
-            dungeon5(skill, efficiency, hero)
-        elif dung_chouse == 6:
-            dungeon6(skill, efficiency, hero)
-        elif dung_chouse == 7:
-            dungeon7(skill, efficiency, hero)
-        elif dung_chouse == 8:
-            dungeon8(skill, efficiency, hero)
-        elif dung_chouse == 9:
-            dungeon9(skill, efficiency, hero)
-        elif dung_chouse == 10:
-            dungeon10(skill, efficiency, hero)
+    adventure = [dungeon1(skill, efficiency, hero),
+                 dungeon2(skill, efficiency, hero),
+                 dungeon3(skill, efficiency, hero),
+                 dungeon4(skill, efficiency, hero),
+                 dungeon5(skill, efficiency, hero),
+                 dungeon6(skill, efficiency, hero),
+                 ]
+    for i in range(random.randint(3,6)):
+        random.shuffle(adventure)
+        adventure.pop()
         time.sleep(3)
+    # number_of_rooms = random.randint(3,5)
+    # dungeons = [1, 2, 4, 5, 6, 3]
+    #
+    # for i in range(1, number_of_rooms + 1):
+    #     random.shuffle(dungeons)
+    #     dung_chouse = dungeons.pop()
+    #     if dung_chouse == 1:
+    #         dungeon1(skill, efficiency, hero)
+    #     elif dung_chouse == 2:
+    #         dungeon2(skill, efficiency, hero)
+    #     elif dung_chouse == 3:
+    #         dungeon3(skill, efficiency, hero)
+    #     elif dung_chouse == 4:
+    #         dungeon4(skill, efficiency, hero)
+    #     elif dung_chouse == 5:
+    #         dungeon5(skill, efficiency, hero)
+    #     elif dung_chouse == 6:
+    #         dungeon6(skill, efficiency, hero)
+    #     elif dung_chouse == 7:
+    #         dungeon7(skill, efficiency, hero)
+    #     elif dung_chouse == 8:
+    #         dungeon8(skill, efficiency, hero)
+    #     elif dung_chouse == 9:
+    #         dungeon9(skill, efficiency, hero)
+    #     elif dung_chouse == 10:
+    #         dungeon10(skill, efficiency, hero)
+    #     time.sleep(3)
     final_room1(skill, efficiency, hero)
 except TypeError as err_msg:
     print('Ваше преключение закончилось')
